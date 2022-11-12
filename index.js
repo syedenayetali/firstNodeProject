@@ -40,9 +40,7 @@ const server = http
     const urlParsed = url.parse(myUrl, true);
     const { pathname, query } = urlParsed;
 
-    if (req.url === "/") {
-      res.end("This is homepage\n");
-    } else if (pathname === "/card") {
+    if (pathname === "/card") {
       res.writeHead(200, { "Content-type": "text/html" });
       res.end(card);
     } else if (pathname === "/" || pathname === "/overview") {
