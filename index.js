@@ -65,5 +65,4 @@ const server = http
   })
   .listen(8000, () => {
     console.log("Server is running!");
-    console.log(__dirname);
   });
