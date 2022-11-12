@@ -45,7 +45,7 @@ const server = http
     } else if (pathname === "/card") {
       res.writeHead(200, { "Content-type": "text/html" });
       res.end(card);
-    } else if (pathname === "/overview") {
+    } else if (pathname === "/" || pathname === "/overview") {
       res.writeHead(200, { "Content-type": "text/html" });
       const cardHtml = dataObj.map((e) => replaceTemplate(card, e)).join("");
       //   console.log(cardHtml);
